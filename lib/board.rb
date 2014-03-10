@@ -1,0 +1,28 @@
+class Board
+
+	def initialize(player)
+		@player = player
+	end
+
+	def owner
+		@player.name
+	end
+
+	#this method should register the shot at the coordinates passed
+	#hitting a ship or just hitting the water
+	def register_shot(at_coordinates)
+	end
+
+	# This method returns an array containing 10 arrays with 10 elements where:
+	# an empty string ('') denotes an empty space in the grid 
+	# an 'o' denotes a shot in the water
+	# an 'x' denotes a hit on a ship
+	# an 's' denotes a ship
+	# you can change the representations as you please, make sure you have different types
+	def rows
+	end
+	#this method returns an array containing 10 arrays with 10 elementsd each ( as in rows) replacing the ships
+	# with an empty string ('') so that your opponent cannot see your ships.
+	def opponent_view
+	end
+end
