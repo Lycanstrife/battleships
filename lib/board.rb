@@ -18,14 +18,16 @@ class Board
 	def initialize(player)
 		@player = player
 		@rows = Array.new(10) { Array.new(10, ' ') }
-		20.times { rows[rand(9)][rand(9)] = 's' }
+		# 20.times { rows[rand(9)][rand(9)] = 's' }
 		# 4 ships of 1
 		# 3 ships of 2
 		# 2 ships of 3
 		# 1 ships of 4
 	end
 
-
+	def injects_a_ship_of_one
+		4.times { rows[rand(9)][rand(9)] = 's' }
+	end
 
 	def owner
 		@player.name
