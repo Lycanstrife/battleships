@@ -45,5 +45,6 @@ class Board
 	#this method returns an array containing 10 arrays with 10 elementsd each ( as in rows) replacing the ships
 	# with an empty string ('') so that your opponent cannot see your ships.
 	def opponent_view
+		self.rows.map { |row| row.map { |value| value == 's' ? '' : value }}
 	end
 end

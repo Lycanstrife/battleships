@@ -13,5 +13,7 @@ describe Board do
 		expect(board.rows.flatten.include?('s' || 'o')).to be_true	
 	end
 
-
+	it 'should return an array that an opponent can see' do
+		expect(board.opponent_view.flatten.include?('s')).to be_false
+	end
 end
